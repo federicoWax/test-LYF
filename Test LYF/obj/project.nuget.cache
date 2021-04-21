@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EVtyUjzXtcbbu4C4u3jha9DJUP1aHdrAPGe3EdF7ysSivv8W46N2AEPZFpOCvvwvh7SC4dgWj28w+4KhwBCmoA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\Test LYF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Federico\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
