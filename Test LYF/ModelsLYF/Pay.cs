@@ -4,12 +4,9 @@ using System.Text;
 
 namespace Test_LYF.ModelsLYF
 {
-    public class Account
+    public class Pay
     {
-        public string debt { get; set; }
-        public string user { get; set; }
         public string account { get; set; }
-
-        public string message { get; set; }
+        public double pay { get; set; }
     }
 }

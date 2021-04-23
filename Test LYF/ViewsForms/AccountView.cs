@@ -19,16 +19,8 @@ namespace Test_LYF.ViewsForms
         public AccountView()
         {
             InitializeComponent();
-            InitializeStyle();
             InitializeBackgroundWorker();
-        }
-
-        private void InitializeStyle()
-        {
-            tableLayoutPanel1.Left = (this.ClientSize.Width - tableLayoutPanel1.Width) / 2;
-            tableLayoutPanel1.Top = (this.ClientSize.Height - tableLayoutPanel1.Height) / 7;
-            tableLayoutPanel2.Left = (this.ClientSize.Width - tableLayoutPanel2.Width) / 2;
-            tableLayoutPanel2.Top = (this.ClientSize.Height - tableLayoutPanel2.Height) / 2;
+            lblCargando.Visible = false;
         }
 
         private void InitializeBackgroundWorker()
@@ -54,19 +46,27 @@ namespace Test_LYF.ViewsForms
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            lblCargando.Visible = false;
+
             if (e.Error != null)
             {
                 MessageBox.Show(e.Error.Message);
+                return;
             }
-            else
-            {
-                 Account account = e.Result as Account;
+            
+            Account account = e.Result as Account;
 
-                if(!string.IsNullOrEmpty(account.message))
-                {
-                    MessageBox.Show(account.message);
-                }
+            if (!string.IsNullOrEmpty(account.message))
+            {
+                MessageBox.Show(account.message);
+                return;
             }
+
+            account.account = txtAccount.Text;
+            MyAccountView myAccount = new MyAccountView(account);
+
+            myAccount.Show();
+            this.Hide();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -136,10 +136,11 @@ namespace Test_LYF.ViewsForms
         {
             if(string.IsNullOrEmpty(txtAccount.Text))
             {
-                MessageBox.Show("Favor de escribir el número de cuenta");
+                MessageBox.Show("Favor de escribir el número de cuenta.");
                 return;
             }
 
+            lblCargando.Visible = true;
             backgroundWorker1.RunWorkerAsync();
         }
     }

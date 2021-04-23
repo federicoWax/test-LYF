@@ -13,6 +13,9 @@ C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LY
 C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LYF.dll
 C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LYF.pdb
 C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LYF.genruntimeconfig.cache
-C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LYF.csprojAssemblyReference.cache
 C:\Users\Federico\source\repos\Test LYF\Test LYF\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LYF.csproj.CopyComplete
+C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test_LYF.ViewsForms.MyAccountView.resources
+C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test_LYF.ViewsForms.PaymentView.resources
+C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test LYF.csprojAssemblyReference.cache
+C:\Users\Federico\source\repos\Test LYF\Test LYF\obj\Debug\netcoreapp3.1\Test_LYF.Properties.Resources.resources
