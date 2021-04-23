@@ -43,7 +43,7 @@ namespace Test_LYF.ViewsForms
         {
             Pay pay = new Pay();
             pay.account = account.account;
-            pay.pay = double.Parse(lblDesposited.Text.Substring(1, lblDesposited.Text.Length - 1)) - double.Parse(lblChange.Text.Substring(1, lblChange.Text.Length - 1));
+            pay.paid = double.Parse(lblDesposited.Text.Substring(1, lblDesposited.Text.Length - 1)) - double.Parse(lblChange.Text.Substring(1, lblChange.Text.Length - 1));
             var response = servicesHttp.post("transaction?token=be2c7efc27d7fbfc8d3b1ee4979def9dW", pay);
             response.Wait();
             string json = response.Result;
