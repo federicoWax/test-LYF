@@ -97,7 +97,7 @@ namespace Test_LYF.ViewsForms
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(157, 45);
             this.btnNext.TabIndex = 3;
-            this.btnNext.Text = "Pagar >";
+            this.btnNext.Text = "Abonar >";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -108,7 +108,7 @@ namespace Test_LYF.ViewsForms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.24471F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.75529F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel1.Controls.Add(this.lblChange, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblRemaining, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
@@ -117,12 +117,12 @@ namespace Test_LYF.ViewsForms
             this.tableLayoutPanel1.Controls.Add(this.lblDebt, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(59, 66);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(53, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(679, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(695, 100);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // lblChange
@@ -131,7 +131,7 @@ namespace Test_LYF.ViewsForms
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblChange.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblChange.Location = new System.Drawing.Point(572, 54);
+            this.lblChange.Location = new System.Drawing.Point(586, 54);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(50, 41);
             this.lblChange.TabIndex = 13;
@@ -144,7 +144,7 @@ namespace Test_LYF.ViewsForms
             this.lblRemaining.AutoSize = true;
             this.lblRemaining.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRemaining.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblRemaining.Location = new System.Drawing.Point(412, 54);
+            this.lblRemaining.Location = new System.Drawing.Point(425, 54);
             this.lblRemaining.Name = "lblRemaining";
             this.lblRemaining.Size = new System.Drawing.Size(34, 41);
             this.lblRemaining.TabIndex = 13;
@@ -156,7 +156,7 @@ namespace Test_LYF.ViewsForms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(32, 4);
+            this.label1.Location = new System.Drawing.Point(35, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 41);
             this.label1.TabIndex = 8;
@@ -169,7 +169,7 @@ namespace Test_LYF.ViewsForms
             this.lblDesposited.AutoSize = true;
             this.lblDesposited.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDesposited.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblDesposited.Location = new System.Drawing.Point(231, 54);
+            this.lblDesposited.Location = new System.Drawing.Point(241, 54);
             this.lblDesposited.Name = "lblDesposited";
             this.lblDesposited.Size = new System.Drawing.Size(50, 41);
             this.lblDesposited.TabIndex = 12;
@@ -181,9 +181,9 @@ namespace Test_LYF.ViewsForms
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(179, 0);
+            this.label2.Location = new System.Drawing.Point(180, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 50);
+            this.label2.Size = new System.Drawing.Size(172, 41);
             this.label2.TabIndex = 9;
             this.label2.Text = "Depositado";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,7 +194,7 @@ namespace Test_LYF.ViewsForms
             this.lblDebt.AutoSize = true;
             this.lblDebt.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDebt.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblDebt.Location = new System.Drawing.Point(67, 54);
+            this.lblDebt.Location = new System.Drawing.Point(71, 54);
             this.lblDebt.Name = "lblDebt";
             this.lblDebt.Size = new System.Drawing.Size(34, 41);
             this.lblDebt.TabIndex = 11;
@@ -206,7 +206,7 @@ namespace Test_LYF.ViewsForms
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(363, 4);
+            this.label3.Location = new System.Drawing.Point(376, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 41);
             this.label3.TabIndex = 10;
@@ -218,7 +218,7 @@ namespace Test_LYF.ViewsForms
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(536, 4);
+            this.label4.Location = new System.Drawing.Point(551, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 41);
             this.label4.TabIndex = 14;
@@ -233,7 +233,7 @@ namespace Test_LYF.ViewsForms
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.71566F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel2.Controls.Add(this.circleButton5, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.circleButton4, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.circleButton3, 2, 1);
@@ -256,7 +256,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.circleButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.circleButton5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circleButton5.Location = new System.Drawing.Point(670, 83);
+            this.circleButton5.Location = new System.Drawing.Point(668, 83);
             this.circleButton5.Name = "circleButton5";
             this.circleButton5.Size = new System.Drawing.Size(67, 62);
             this.circleButton5.TabIndex = 10;
@@ -268,7 +268,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.circleButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.circleButton4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circleButton4.Location = new System.Drawing.Point(520, 83);
+            this.circleButton4.Location = new System.Drawing.Point(517, 83);
             this.circleButton4.Name = "circleButton4";
             this.circleButton4.Size = new System.Drawing.Size(67, 62);
             this.circleButton4.TabIndex = 9;
@@ -280,7 +280,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.circleButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.circleButton3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circleButton3.Location = new System.Drawing.Point(362, 83);
+            this.circleButton3.Location = new System.Drawing.Point(359, 83);
             this.circleButton3.Name = "circleButton3";
             this.circleButton3.Size = new System.Drawing.Size(67, 62);
             this.circleButton3.TabIndex = 8;
@@ -292,7 +292,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.circleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.circleButton2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circleButton2.Location = new System.Drawing.Point(199, 83);
+            this.circleButton2.Location = new System.Drawing.Point(197, 83);
             this.circleButton2.Name = "circleButton2";
             this.circleButton2.Size = new System.Drawing.Size(67, 62);
             this.circleButton2.TabIndex = 7;
@@ -304,7 +304,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(660, 17);
+            this.button5.Location = new System.Drawing.Point(659, 17);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(86, 38);
             this.button5.TabIndex = 4;
@@ -316,7 +316,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(511, 17);
+            this.button4.Location = new System.Drawing.Point(508, 17);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(84, 38);
             this.button4.TabIndex = 3;
@@ -328,7 +328,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(351, 17);
+            this.button3.Location = new System.Drawing.Point(348, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 38);
             this.button3.TabIndex = 2;
@@ -340,7 +340,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(189, 17);
+            this.button2.Location = new System.Drawing.Point(187, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 38);
             this.button2.TabIndex = 1;
@@ -352,7 +352,7 @@ namespace Test_LYF.ViewsForms
             // 
             this.btn500.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn500.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn500.Location = new System.Drawing.Point(28, 17);
+            this.btn500.Location = new System.Drawing.Point(27, 17);
             this.btn500.Name = "btn500";
             this.btn500.Size = new System.Drawing.Size(93, 38);
             this.btn500.TabIndex = 0;
@@ -366,7 +366,7 @@ namespace Test_LYF.ViewsForms
             this.circleButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.circleButton1.FlatAppearance.BorderSize = 0;
             this.circleButton1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circleButton1.Location = new System.Drawing.Point(41, 83);
+            this.circleButton1.Location = new System.Drawing.Point(40, 83);
             this.circleButton1.Name = "circleButton1";
             this.circleButton1.Size = new System.Drawing.Size(67, 62);
             this.circleButton1.TabIndex = 6;
@@ -395,7 +395,7 @@ namespace Test_LYF.ViewsForms
             this.lblCargando.Location = new System.Drawing.Point(0, 0);
             this.lblCargando.Name = "lblCargando";
             this.lblCargando.Size = new System.Drawing.Size(800, 450);
-            this.lblCargando.TabIndex = 10;
+            this.lblCargando.TabIndex = 12;
             this.lblCargando.Text = "Cargando...";
             this.lblCargando.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

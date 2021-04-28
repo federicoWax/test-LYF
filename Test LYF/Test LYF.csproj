@@ -9,6 +9,13 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.113.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DeviceLibrary">
+      <HintPath>..\..\..\..\Downloads\DeviceLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

@@ -7,6 +7,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Test_LYF.ModelsLYF;
+using DeviceLibrary.Models.Enums;
+using DeviceLibrary.Models;
+using Test_LYF.ServicesSqlite;
+using System.Data.SQLite;
 
 namespace Test_LYF.ViewsForms
 {
@@ -15,15 +19,57 @@ namespace Test_LYF.ViewsForms
         private Account account;
         private ServicesHttp.ServicesHttp servicesHttp = new ServicesHttp.ServicesHttp();
         private BackgroundWorker backgroundWorker1 = new BackgroundWorker();
+        private DeviceLibrary.DeviceLibrary deviceLibrary = new DeviceLibrary.DeviceLibrary();
+        private DataAccess dataAccess = new DataAccess();
 
         public PaymentView(Account _account)
         {
             InitializeComponent();
             InitializeBackgroundWorker();
+            dataAccess.InitializeDatabase();
+            initDeviceLibrary();
             account = _account;
             lblDebt.Text = "$" + account.debt;
             lblRemaining.Text = "$" + account.debt;
-            lblCargando.Visible = false;
+        }
+
+        private void initDeviceLibrary()
+        {
+            try
+            {
+                deviceLibrary.Open();
+                deviceLibrary.Enable();
+                DeviceStatus status = deviceLibrary.Status;
+
+
+                if (status == DeviceStatus.Disconnected)
+                {
+                    MessageBox.Show("El dispositivo NO está conectado.");
+                    goBack();
+                    return;
+                }
+
+                if (status == DeviceStatus.Disabled)
+                {
+                    MessageBox.Show("El dispositivo NO acepta monedas ni billetes en este momento.");
+                    goBack();
+                    return;
+                }
+
+                lblCargando.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void goBack()
+        {
+            WelcomeView myAccount = new WelcomeView();
+            myAccount.Show();
+            deviceLibrary.Close();
+            this.Hide();
         }
 
         private void InitializeBackgroundWorker()
@@ -44,7 +90,7 @@ namespace Test_LYF.ViewsForms
             Pay pay = new Pay();
             pay.account = account.account;
             pay.paid = double.Parse(lblDesposited.Text.Substring(1, lblDesposited.Text.Length - 1)) - double.Parse(lblChange.Text.Substring(1, lblChange.Text.Length - 1));
-            var response = servicesHttp.post("transaction?token=be2c7efc27d7fbfc8d3b1ee4979def9dW", pay);
+            var response = servicesHttp.post("transaction?token=be2c7efc27d7fbfc8d3b1ee4979def9d", pay);
             response.Wait();
             string json = response.Result;
             return JsonConvert.DeserializeObject<Account>(json);
@@ -52,11 +98,9 @@ namespace Test_LYF.ViewsForms
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (lblDebt.Text == "$0")
+            if (lblDesposited.Text == "$0")
             {
-                WelcomeView myAccount = new WelcomeView();
-                myAccount.Show();
-                this.Hide();
+                goBack();
             }
             else
             {
@@ -116,7 +160,19 @@ namespace Test_LYF.ViewsForms
 
         void updateData(double pay)
         {
+            DeviceStatus status = deviceLibrary.Status;
+
+            if (status != DeviceStatus.Enabled)
+            {
+                MessageBox.Show("Error de conexion.");
+                goBack();
+                return;
+            }
+
             if (lblRemaining.Text == "$0") return;
+
+            Document document = new Document(Decimal.Parse(pay.ToString()), pay > 20 ? DocumentType.Bill : DocumentType.Coin, 1);
+            deviceLibrary.SimulateInsertion(document);
 
             double newDebt = (double.Parse(lblRemaining.Text.Substring(1, lblRemaining.Text.Length - 1)) - pay);
 
@@ -132,6 +188,8 @@ namespace Test_LYF.ViewsForms
 
             lblRemaining.Text = "$" + newDebt.ToString();
             lblDesposited.Text = "$" + (double.Parse(lblDesposited.Text.Substring(1, lblDesposited.Text.Length - 1)) + pay).ToString();
+
+            dataAccess.addPayment(account.user, int.Parse(account.account), newDebt, double.Parse(lblDesposited.Text.Substring(1, lblDesposited.Text.Length - 1)) + pay);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -165,11 +223,13 @@ namespace Test_LYF.ViewsForms
                 return;
             }
 
-           
-            WelcomeView welcomeView = new WelcomeView();
 
-            welcomeView.Show();
-            this.Hide();
+            goBack();
+        }
+
+        private void lblCargando_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
