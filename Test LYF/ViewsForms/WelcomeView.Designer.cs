@@ -57,6 +57,7 @@ namespace Test_LYF.ViewsForms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome View";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WelcomeView_FormClosed);
             this.ResumeLayout(false);
 
         }

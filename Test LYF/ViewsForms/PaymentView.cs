@@ -33,6 +33,11 @@ namespace Test_LYF.ViewsForms
             lblRemaining.Text = "$" + account.debt;
         }
 
+        private void DeviceLibrary_AcceptedDocument(Document obj)
+        {
+            throw new NotImplementedException();
+        }
+
         private void initDeviceLibrary()
         {
             try
@@ -69,7 +74,7 @@ namespace Test_LYF.ViewsForms
             WelcomeView myAccount = new WelcomeView();
             myAccount.Show();
             deviceLibrary.Close();
-            this.Hide();
+            this.Close();
         }
 
         private void InitializeBackgroundWorker()
@@ -171,6 +176,8 @@ namespace Test_LYF.ViewsForms
 
             if (lblRemaining.Text == "$0") return;
 
+            //deviceLibrary.AcceptedDocument += DeviceLibrary_AcceptedDocument;
+
             Document document = new Document(Decimal.Parse(pay.ToString()), pay > 20 ? DocumentType.Bill : DocumentType.Coin, 1);
             deviceLibrary.SimulateInsertion(document);
 
@@ -227,9 +234,9 @@ namespace Test_LYF.ViewsForms
             goBack();
         }
 
-        private void lblCargando_Click(object sender, EventArgs e)
+        private void PaymentView_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RoIJPS6+aa/Pf9W6uNCmmcKqrYb2zraLnMkS1sjtSoecYpsC8pz3HFeOuEGlXlFvrYl5lVsCwBd0rWyFTF8iCw==",
+  "dgSpecHash": "gPgr57IZ15fpPAIcpr8/sXGyECW8tgG1kk+XHES6cP+JUplIeva41ZK7GP7wLPzIlym/xKGvd69cK3a0tZIifw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\Test LYF.csproj",
+  "projectFilePath": "C:\\Users\\Federico\\Desktop\\test\\test-LYF\\Test LYF\\Test LYF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Federico\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\Federico\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",

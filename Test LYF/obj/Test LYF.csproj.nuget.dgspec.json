@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\Test LYF.csproj": {}
+    "C:\\Users\\Federico\\Desktop\\test\\test-LYF\\Test LYF\\Test LYF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\Test LYF.csproj": {
+    "C:\\Users\\Federico\\Desktop\\test\\test-LYF\\Test LYF\\Test LYF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\Test LYF.csproj",
+        "projectUniqueName": "C:\\Users\\Federico\\Desktop\\test\\test-LYF\\Test LYF\\Test LYF.csproj",
         "projectName": "Test LYF",
-        "projectPath": "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\Test LYF.csproj",
+        "projectPath": "C:\\Users\\Federico\\Desktop\\test\\test-LYF\\Test LYF\\Test LYF.csproj",
         "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Federico\\source\\repos\\Test LYF\\Test LYF\\obj\\",
+        "outputPath": "C:\\Users\\Federico\\Desktop\\test\\test-LYF\\Test LYF\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\Federico\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

@@ -25,19 +25,24 @@ namespace Test_LYF.ViewsForms
         {
             AccountView accountView = new AccountView();
             accountView.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             PaymentView paymentView = new PaymentView(account);
             paymentView.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MyAccountView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

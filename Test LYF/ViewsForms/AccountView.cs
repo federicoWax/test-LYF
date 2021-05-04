@@ -66,14 +66,14 @@ namespace Test_LYF.ViewsForms
             MyAccountView myAccount = new MyAccountView(account);
 
             myAccount.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             WelcomeView welcomeView = new WelcomeView();
             welcomeView.Show();
+            this.Close();
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -142,6 +142,11 @@ namespace Test_LYF.ViewsForms
 
             lblCargando.Visible = true;
             backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void AccountView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

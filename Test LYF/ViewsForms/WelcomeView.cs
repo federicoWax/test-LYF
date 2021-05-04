@@ -21,5 +21,10 @@ namespace Test_LYF.ViewsForms
             AccountView acountView = new AccountView();
             acountView.Show();
         }
+
+        private void WelcomeView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
