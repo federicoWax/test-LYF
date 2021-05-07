@@ -146,7 +146,6 @@ namespace Test_LYF.ViewsForms
 
         private void AccountView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
         }
     }
 }

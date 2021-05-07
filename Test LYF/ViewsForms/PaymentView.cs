@@ -236,7 +236,6 @@ namespace Test_LYF.ViewsForms
 
         private void PaymentView_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
         }
     }
 }
